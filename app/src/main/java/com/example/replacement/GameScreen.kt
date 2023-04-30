@@ -61,4 +61,17 @@ fun GameScreen(navController: NavController){
         }
 
     }
+    Row(modifier = Modifier.offset(115.dp,560.dp)) {
+        Button(
+            onClick = {
+                if (score.value >= 1) {
+                    score.value = score.value - 1
+                    clicks.value = clicks.value + 10000
+                }
+            }
+        ) {
+            Text(text = "Cost:1 Candies\n+10000 Candies/Click")
+        }
+    }
+
 }
